@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import {Avatar} from "@nextui-org/react";
 import { useRouter } from 'next/router'
 import { Popover, Transition } from '@headlessui/react'
 import clsx from 'clsx'
@@ -226,7 +227,7 @@ function AvatarContainer({ className, ...props }) {
 }
 
 // 头像
-function Avatar({ large = false, className, ...props }) {
+function HomeAvatar({ large = false, className, ...props }) {
   return (
     <Link
       href="/"
@@ -244,6 +245,10 @@ function Avatar({ large = false, className, ...props }) {
         )}
         priority
       />
+      <Avatar
+        src = {avatarImage}      
+      >
+      </Avatar>
     </Link>
   )
 }
@@ -382,7 +387,7 @@ export function Header() {
                       transform: 'var(--avatar-border-transform)',
                     }}
                   />
-                  <Avatar
+                  <HomeAvatar
                     large
                     className="block h-32 w-32 origin-left"
                     style={{ transform: 'var(--avatar-image-transform)' }}
@@ -405,7 +410,7 @@ export function Header() {
               <div className="flex flex-1">
                 {!isHomePage && (
                   <AvatarContainer>
-                    <Avatar />
+                    <HomeAvatar />
                   </AvatarContainer>
                 )}
               </div>

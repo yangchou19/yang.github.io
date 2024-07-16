@@ -53,17 +53,17 @@ export default function Home({ articles }) {
 
       <Head>
         <title>
-          赵纯想个人网站 - 产品，课程，文学和博客
+          周晨扬的个人网站 - 技术、爱好和博客
         </title>
         <meta
-          name="赵纯想个人网站"
-          content="我写一些小说，代码和剧本。目标是拍电影。"
+          name="周晨扬个人网站"
+          content="我是有一些爱好的程序员。"
         />
       </Head>
       <Container className="mt-24">
         <div className="max-w-2xl pb-24">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-            赵纯想个人网站
+            周晨扬的个人网站
           </h1>
 
           {/* 联系方式连接 */}
@@ -122,22 +122,17 @@ function SocialLinks() {
   return (
     <div className="mt-6 flex gap-6">
       <SocialLink
-        href="https://v.douyin.com/hfLkMQV/"
-        aria-label="Follow on 抖音"
-        icon={TikTokIcon}
-      />
-      <SocialLink
-        href="https://space.bilibili.com/26317883/"
+        href=""
         aria-label="Follow on Bilibili"
         icon={BiliBiliIcon}
       />
       <SocialLink
-        href="https://github.com/liseami"
+        href=""
         aria-label="Follow on GitHub"
         icon={GitHubIcon}
       />
       <SocialLink
-        href="https://twitter.com/liseami1"
+        href=""
         aria-label="Follow on Twitter"
         icon={TwitterIcon}
       />
