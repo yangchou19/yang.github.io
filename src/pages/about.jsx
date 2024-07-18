@@ -41,9 +41,9 @@ export default function About() {
   return (
     <>
       <Head>
-        <title>关于我 - 独立开发者</title>
+        <title>关于我 - </title>
         <meta
-          name="关于赵纯想"
+          name="关于周晨扬"
           content="我对创造感兴趣。而不局限于小说、软件，和剧本。创造的激情是我作为人生的意义所一直保护的东西， 尽管它曾屡受打击，但总能从我乐天派的心地上重新抽丝剥茧。"
         />
       </Head>
@@ -61,7 +61,7 @@ export default function About() {
           </div>
           <div className="lg:order-first lg:row-span-2">
             <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-              独立开发者。纯想理心社发起人。赵纯想。
+              关于周晨扬
             </h1>
             <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
               <p>
@@ -104,21 +104,12 @@ export default function About() {
               <SocialLink className='pt-3' href="https://github.com/liseami" icon={GitHubIcon}>
                 在Github上关注我
               </SocialLink>
-              {/* <SocialLink href="#" icon={InstagramIcon} className="mt-4">
-                Follow on Instagram
-              </SocialLink>
-              <SocialLink href="#" icon={GitHubIcon} className="mt-4">
-                Follow on GitHub
-              </SocialLink>
-              <SocialLink href="#" icon={LinkedInIcon} className="mt-4">
-                Follow on LinkedIn
-              </SocialLink> */}
               <SocialLink
                 href="mailto:spencer@planetaria.tech"
                 icon={MailIcon}
                 className="mt-8 border-t border-zinc-100 pt-8 dark:border-zinc-700/40"
               >
-                liseami@qq.com
+                1178574011@qq.com
               </SocialLink>
             </ul>
           </div>

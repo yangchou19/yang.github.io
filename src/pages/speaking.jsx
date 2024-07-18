@@ -31,14 +31,14 @@ export default function Speaking() {
   return (
     <>
       <Head>
-        <title>课程 - 课程报名</title>
+        <title>技术路线</title>
         <meta
           name="课程报名"
           content="赵纯想出品 - iOS开发课程（购前可微信zhaochunxiang1109咨询）"
         />
       </Head>
       <SimpleLayout
-        title="赵纯想出品 - iOS开发课程"
+        title="技术介绍"
         intro="基础课程以单口相声风格演绎，看过的无一不惊叹技术教育的趣味性竟可以如此之高。专业课程文档全面覆盖，下拉即可以免费查看所有文档。详尽的文档，配合专业设备录制的高清4k视频。从零到一，将你从计算机小白打造成对任何App信手拈来的开发者。"
       >
         <div className="space-y-20">

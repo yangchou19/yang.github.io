@@ -26,11 +26,12 @@ export function Footer() {
                 <NavLink href="/speaking">课程</NavLink>
                 <NavLink href="/uses">更多</NavLink>
               </div>
-              <p className="text-sm text-zinc-400 dark:text-zinc-500">
+              {/* 版权所有 */}
+              {/* <p className="text-sm text-zinc-400 dark:text-zinc-500">
                 &copy; {new Date().getFullYear()} 赵纯想. 版权所有 <Link href='https://beian.miit.gov.cn/#/Integrated/recordQuery' className = ' text-blue-400'>
                 沪ICP备19032288号-3
                 </Link>
-              </p>
+              </p> */}
             </div>
           </Container.Inner>
         </div>

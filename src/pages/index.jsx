@@ -20,8 +20,6 @@ import { ProjectList } from '@/pages/projects'
 
 
 
-
-
 function Article({ article }) {
   return (
     <Card as="article">
@@ -50,7 +48,6 @@ function SocialLink({ icon: Icon, ...props }) {
 export default function Home({ articles }) {
   return (
     <>
-
       <Head>
         <title>
           周晨扬的个人网站 - 技术、爱好和博客
@@ -69,31 +66,13 @@ export default function Home({ articles }) {
           {/* 联系方式连接 */}
           <SocialLinks />
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            这是我的<CopyButton content="zhaochunxiang1109" btntitle='私人微信' className="text-emerald-600" />，注明来意。
+            这是我的<CopyButton content="spacecowboyyang" btntitle='私人微信' className="text-emerald-600" />，欢迎一起交流。
             <br></br>
             <br></br>
-            写写小说、代码和剧本。最近在开发
-            <Link href="https://bellybook.cn/" className="text-emerald-600">胃之书 - AI美食记录员App</Link>。
-            {/* <Link href="https://naduo.love/" className="text-emerald-600">那朵App（数字永生与数字缅怀）</Link>创始人（目前暂停运营）
-            <Link href="https://apps.apple.com/cn/app/%E8%BD%AC%E5%B1%B1-%E8%A1%8C%E4%B8%BA%E4%B9%A0%E6%83%AF%E5%A1%91%E9%80%A0/id6444640823" className="text-emerald-600">转山App</Link>开发者。 */}
-            居无定所。我开发了一套
-            <Link href="/speaking" className="text-emerald-600">《iOS - SwiftUI 开发课程》</Link>
-            还有一套
-            <Link href="/articles/" className="text-emerald-600">《赵纯想改序道德经课程》</Link>
-            文学方面，出版作品有
-            <Link href="https://book.douban.com/subject/26990080/" className="text-emerald-600">《坏一坏》</Link>、
-            <Link href="https://book.douban.com/subject/34865437/" className="text-emerald-600">《人生灿灿》</Link>，另外，有几篇
-            <Link href="/articles" className="text-emerald-600">本站可阅读的文章</Link>。
-            另外，如果你对这个网站的实现方式感兴趣：它使用
-            <Link href="https://nextjs.org/" className="text-emerald-600">Next.js</Link>、
-            <Link href="https://reactjs.org/" className="text-emerald-600">React</Link>搭建，
-            也使用了基于
-            <Link href="https://tailwindcss.com/" className="text-emerald-600">TailwindCSS</Link>的模版。在我的
-            <Link href="https://github.com/liseami" className='text-emerald-600'>Github</Link>中，
-            你也可以找到源码。
+            这是我的个人简介。
             <br></br>
             <br></br>
-            我正在为最新的创业项目招募技术合作伙伴，如你对感兴趣，尽快联系我。不限于iOS，安卓，Java，python和react。请用邮箱与我联系，并附带简历。liseami@qq.com
+            正在努力变得更好，不淹没在历史的潮流之中。
           </p>
         </div>
         {/* 产品 */}
