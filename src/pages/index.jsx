@@ -15,7 +15,7 @@ import {
 import { generateRssFeed } from '@/lib/generateRssFeed'
 import { getAllArticles } from '@/lib/getAllArticles'
 import { formatDate } from '@/lib/formatDate'
-import { ProjectList } from '@/pages/projects'
+import { ProjectList } from '@/pages/hobby'
 
 
 

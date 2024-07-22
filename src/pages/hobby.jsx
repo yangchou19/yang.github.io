@@ -54,15 +54,15 @@ export default function Projects() {
   return (
     <>
       <Head>
-        <title>产品 - 我创造的东西</title>
+        <title>爱好 - 喜欢的事物</title>
         <meta
-          name="我创造的东西"
-          content="这些是我在这个星球上创造的一些东西。寥寥无几，满含诚意。"
+          name="我喜欢的事情"
+          content="探索世界路上，发现的喜欢。"
         />
       </Head>
       <SimpleLayout
-        title="这些是我在这个星球上创造的一些东西。寥寥无几，满含诚意。"
-        intro="Rage, rage against the dying of the light.痛斥光阴的飞逝！"
+        title="探索世界路上，发现的喜欢"
+        intro="永远保持一颗积极热忱的心，对世界充满好奇。"
       >
         <ProjectList />
       </SimpleLayout>

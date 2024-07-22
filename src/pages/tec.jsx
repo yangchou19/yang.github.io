@@ -27,7 +27,7 @@ function Appearance({ title, description, event, cta, href }) {
   )
 }
 
-export default function Speaking() {
+export default function Technology() {
   return (
     <>
       <Head>

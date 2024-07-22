@@ -30,15 +30,15 @@ export default function Uses() {
   return (
     <>
       <Head>
-        <title>更多 - 自用分享</title>
+        <title>更多 - 闲杂堆物</title>
         <meta
           name="更多"
-          content="自用分享。"
+          content="闲杂堆物。"
         />
       </Head>
       <SimpleLayout
-        title="介绍一些我使用的东西"
-        intro="我的脚手架，“技术日用品”，不限于硬件，软件和框架."
+        title="介绍一些闲杂"
+        intro="我的一些奇奇怪怪的杂谈..."
       >
         <div className="space-y-20">
         <ToolsSection title="技术框架">
