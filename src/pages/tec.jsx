@@ -1,137 +1,114 @@
 import Head from 'next/head'
 
-import CopyButton from '@/components/CopyBtn'
 import { Card } from '@/components/Card'
 import { Section } from '@/components/Section'
 import { SimpleLayout } from '@/components/SimpleLayout'
 import Link from 'next/link'
 
-function SpeakingSection({ children, ...props }) {
+function ToolsSection({ children, ...props }) {
   return (
     <Section {...props}>
-      <div className="space-y-16">{children}</div>
+      <ul role="list" className="space-y-16">
+        {children}
+      </ul>
     </Section>
   )
 }
 
-function Appearance({ title, description, event, cta, href }) {
+function Tool({ title, href, children }) {
   return (
-    <Card as="article">
+    <Card as="li">
       <Card.Title as="h3" href={href}>
         {title}
       </Card.Title>
-      <Card.Eyebrow decorate>{event}</Card.Eyebrow>
-      <Card.Description>{description}</Card.Description>
-      <Card.Cta>{cta}</Card.Cta>
+      <Card.Description>{children}</Card.Description>
     </Card>
   )
 }
 
-export default function Technology() {
+export default function Uses() {
   return (
     <>
       <Head>
-        <title>技术路线</title>
+        <title>技术掌握</title>
         <meta
-          name="课程报名"
-          content="赵纯想出品 - iOS开发课程（购前可微信zhaochunxiang1109咨询）"
+          name="技术栈"
+          content="目前掌握的一些技术栈，仍然需要不断进步学习"
         />
       </Head>
       <SimpleLayout
-        title="技术介绍"
-        intro="基础课程以单口相声风格演绎，看过的无一不惊叹技术教育的趣味性竟可以如此之高。专业课程文档全面覆盖，下拉即可以免费查看所有文档。详尽的文档，配合专业设备录制的高清4k视频。从零到一，将你从计算机小白打造成对任何App信手拈来的开发者。"
+        title="技术栈"
+        intro="目前掌握的一些技术栈，仍然需要不断进步学习。"
       >
         <div className="space-y-20">
-          <CopyButton content='zhaochunxiang1109' btntitle='  点击复制微信号咨询' />
-          <SpeakingSection title="SwfitUI-入门课">
-            <Appearance
-              href="https://www.cctalk.com/m/group/90565680"
-              title="赵纯想SwiftUI入门课程 - 轻松入门"
-              description="0基础。0计算机知识。完全小白的新手课。用生活中的字眼，解释编程世界中的“看似高大上的词汇”。纵观全网，最轻松的“单口相声版”《SwiftUI入门教程》，由讲课鬼才赵纯想出品。"
-              event="最新录制 2023 - 持续更新"
-              cta="课程报名"
-            />
-            <Appearance
-              href="https://www.bilibili.com/video/BV1dW4y1j7zG/"
-              title="iOS开发新手课程路线图｜赵纯想出品最新录制SwiftUI光速入门"
-              description=" 学完课程后，你将具备独自开发App的基础能力。."
-              event="最新录制 2023 - 持续更新"
-              cta="去B站看视频"
-            />
-          </SpeakingSection>
-          <SpeakingSection title="SwfitUI-进阶课">
-            <Appearance
-              href="course/proDevEnv"
-              title="准备：专业环境搭建"
-              description="学习如何安装zsh插件，homebrew，以及git。"
-              event="最新录制 2023 - 持续更新"
-              cta="查看文档"
-            />
-            <Appearance
-              href="course/github"
-              title="准备：使用Git管理你的代码"
-              description="让一切井井有条。"
-              event="最新录制 2023 - 持续更新"
-              cta="查看文档"
-            />
-            <Appearance
-              href="course/courseDocHttpRequest"
-              title="1-Http请求"
-              description="HTTP请求是网络编程中常用的一种方式，它可以帮助我们与网络上的服务器进行交互。在Swift语言中，我们可以使用系统提供的URLSession类来发起HTTP请求。"
-              event="最新录制 2023 - 持续更新"
-              cta="查看文档"
-            />
-            <Appearance
-              href="course/courseDocJSON"
-              title="2-JSON解析与页面渲染"
-              description="在 Swift 中可以使用 URLEncoding.queryString 或 URLEncoding.default 来对 URL 中的中文进行编码。"
-              event="最新录制 2023 - 持续更新"
-              cta="查看文档"
-            />
-            <Appearance
-              href="course/cocopodInstall"
-              title="3-CocoaPods介绍与安装"
-              description="CocoaPods是一个用于iOS和macOS开发的依赖管理工具。它允许开发人员管理第三方库和框架的依赖关系，并将其集成到Xcode项目中。"
-              event="最新录制 2023 - 持续更新"
-              cta="查看文档"
-            />
-            <Appearance
-              href="course/networkTools"
-              title="4-网络请求核武器之纯想框架使用"
-              description="我长期使用的网络框架。"
-              event="最新录制 2023 - 持续更新"
-              cta="查看文档"
-            />
-            <Appearance
-              href="course/networkTiming"
-              title="5-数据请求时机"
-              description="如何利用SwiftUI特性请求网络数据。"
-              event="最新录制 2023 - 持续更新"
-              cta="查看文档"
-            />
-            <Appearance
-              href="course/6_useOpenSourcePackage"
-              title="6-开源软件包使用"
-              description="开源软件包使用。"
-              event="最新录制 2023 - 持续更新"
-              cta="查看文档"
-            />
-            <Appearance
-              href="course/7_uikit"
-              title="7-巨人肩膀之桥接UIKit"
-              description="给开发者发送邮件。"
-              event="最新录制 2023 - 持续更新"
-              cta="查看文档"
-            />
-            <Appearance
-              href="course/8_CoreData"
-              title="8-CoreData本地数据"
-              description="给开发者发送邮件。"
-              event="最新录制 2023 - 持续更新"
-              cta="查看文档"
-            />
-
-          </SpeakingSection>
+          <ToolsSection title="模型">
+            <Tool title="Pytorch">
+              <Link href={'https://pytorch.org/'} className='cursor-pointer'>https://pytorch.org/</Link>
+              <br />
+              PyTorch是一个开源的深度学习框架，广泛应用于机器学习和深度学习领域。它基于Python语言，提供了灵活且高效的神经网络构建工具，并支持动态计算图，使得调试和开发更加方便。
+              - 在研究生期间，主要使用Pytorch进行深度学习的研究和实验，设计相应的群组推荐模型，并取得了一定效果，发表相关论文。
+            </Tool>
+            <Tool title="Chromadb">
+              <Link href={'https://www.trychroma.com'} className='cursor-pointer'>https://www.trychroma.com</Link>
+              <br />
+              ChromaDB 是一个开源的嵌入式矢量数据库，主要用于存储和检索由机器学习模型生成的嵌入向量。
+              <br />
+              - 在公司的项目中结合Chromadb，设计了一套基于向量数据库的检索系统， 进行图片和文字的匹配，文字和文字的匹配等等。
+            </Tool>
+          </ToolsSection>
+          <ToolsSection title="前端">
+            <Tool title="Next.js">
+              <Link href={'https://nextjs.org/'} className='cursor-pointer'>https://nextjs.org/</Link>
+              <br />
+              Next.js 是一个基于 React 的服务端渲染（SSR）框架，旨在帮助开发者构建高性能、高可靠性的全栈 Web 应用程序。它扩展了 React 的功能，提供了许多现代化的功能和工具，使得开发人员能够更加轻松地创建符合 SEO 要求的静态网站和网络应用。
+              <br />
+              目前使用Next.js开发个人网站，在产品中使用Next.js开发。
+            </Tool>
+            <Tool title="Typescript">
+              <Link href={'https://www.typescriptlang.org/'} className='cursor-pointer'>https://www.typescriptlang.org/</Link>
+              <br />
+              TypeScript 是一种由微软开发的开源编程语言，它是 JavaScript 的超集，添加了静态类型和一些其他语言特性，旨在提高代码的可读性、可维护性和可靠性。TypeScript 引入了可选的静态类型系统，需要在编译时验证起类型，减少运行错误。
+            </Tool>
+            <Tool title="Tailwind CSS">
+              <Link href={'https://tailwindcss.com/'} className='cursor-pointer'>https://tailwindcss.com/</Link>
+              <br />
+              Tailwind CSS 是一个高度可定制的实用类优先（Utility-First）的 CSS 框架，旨在帮助开发者快速构建现代化的用户界面。它的核心理念是通过提供一系列原子化的、可复用的工具类，使开发者能够直接在 HTML 标记中应用样式，从而减少编写自定义 CSS 的需求
+              <br />
+              本网站使用Tailwind CSS进行样式设计, 同时在公司产品设计中同样使用tailwind css,非常好用且高效!
+            </Tool>
+            {/* <Tool title="NextUI">
+              <Link href={'https://nextui.org/'} className='cursor-pointer'>https://nextui.org/</Link>
+              <br />
+              NextUI 是一个现代的 React UI 框架，基于 Tailwind CSS 构建，提供了丰富的组件库和强大的功能，非常适合用于构建现代 Web 应用程序。
+            </Tool> */}
+          </ToolsSection>
+          <ToolsSection title="后端">
+            <Tool title="Fastapi">
+              <Link href={'https://fastapi.tiangolo.com/'}>https://fastapi.tiangolo.com/</Link>
+              <br />
+              FastAPI是一个现代、高性能的Web框架，用于构建API，提供了简洁而强大的接口定义方式。
+              <br />
+              对于fastapi，目前在公司的项目中使用，对于整体的设计和开发有较熟悉的流程。
+            </Tool>
+            <Tool title="Java">
+              <br />
+              对于java的开发一般熟悉，读研期间，关于老师的项目开发主要是使用java进行开发。在完成度和规范性上仍然有较多的提升空间。
+            </Tool>
+          </ToolsSection>
+          <ToolsSection title="数据库">
+            <Tool title="PostgreSQL">
+              <Link href={'https://www.postgresql.org/'}>https://www.postgresql.org/</Link>
+              <br />
+              PostgreSQL是一个开源的关系型数据库管理系统，广泛应用于各种业务场景中。它支持多版本并发控制、触发器、规则、全文检索和NoSQL等功能。每个数据库都有一个或多个不同的 API 用于创建，访问，管理，搜索和复制所保存的数据。
+            </Tool>
+          </ToolsSection>
+          <ToolsSection title="个人管理">
+            <Tool title="Notion">
+              <Link href={'https://carpediemyang.notion.site/Yang-31824db1254648dd884641392516950d'}>👋我的主页👋</Link>
+              <br />
+              Notion是一个多功能的协作工具，通过notion可以进行团队协作，个人笔记，项目管理等等，方便进行规划。
+            </Tool>
+          </ToolsSection>
         </div>
       </SimpleLayout>
     </>

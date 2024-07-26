@@ -1,111 +1,137 @@
 import Head from 'next/head'
 
+import CopyButton from '@/components/CopyBtn'
 import { Card } from '@/components/Card'
 import { Section } from '@/components/Section'
 import { SimpleLayout } from '@/components/SimpleLayout'
 import Link from 'next/link'
 
-function ToolsSection({ children, ...props }) {
+function SpeakingSection({ children, ...props }) {
   return (
     <Section {...props}>
-      <ul role="list" className="space-y-16">
-        {children}
-      </ul>
+      <div className="space-y-16">{children}</div>
     </Section>
   )
 }
 
-function Tool({ title, href, children }) {
+function Appearance({ title, description, event, cta, href }) {
   return (
-    <Card as="li">
+    <Card as="article">
       <Card.Title as="h3" href={href}>
         {title}
       </Card.Title>
-      <Card.Description>{children}</Card.Description>
+      <Card.Eyebrow decorate>{event}</Card.Eyebrow>
+      <Card.Description>{description}</Card.Description>
+      <Card.Cta>{cta}</Card.Cta>
     </Card>
   )
 }
 
-export default function Uses() {
+export default function Technology() {
   return (
     <>
       <Head>
-        <title>更多 - 闲杂堆物</title>
+        <title>杂谈</title>
         <meta
-          name="更多"
-          content="闲杂堆物。"
+          name="一些杂谈"
+          content="发表自己的一些观点和感悟。"
         />
       </Head>
       <SimpleLayout
-        title="介绍一些闲杂"
-        intro="我的一些奇奇怪怪的杂谈..."
+        title="杂谈分享"
+        intro="发表自己的一些观点和感悟。"
       >
         <div className="space-y-20">
-        <ToolsSection title="技术框架">
-            <Tool title="FastApi">
-              <Link href={'https://fastapi.tiangolo.com/'}>https://fastapi.tiangolo.com/</Link>
-              <br/>
-              FastAPI 是一种现代、快速（高性能）的 Web 框架，用于基于标准 Python 类型提示使用 Python 3.7+ 构建 API。
-            </Tool>
-            <Tool title="Next.js">
-              <Link href={'https://nextjs.org/'}>https://nextjs.org/</Link>
-              <br/>
-              Next.js 被一些世界上最大的公司使用，它使您能够通过扩展最新的 React 功能并集成强大的基于 Rust 的 JavaScript 工具来创建全栈 Web 应用程序以实现最快的构建。
-            </Tool>
-            <Tool title="SwiftUI">
-            <Link href={'https://developer.apple.com/xcode/swiftui/'}>https://developer.apple.com/xcode/swiftui/</Link>
-              <br/>
-              苹果跨平台UI框架。
-            </Tool>
-          </ToolsSection>
-          <ToolsSection title="硬件">
-            <Tool title="14” MacBook Pro, M1 Max, 64GB RAM (2021)">
-              64GB内存，做任何开发，剪任何片子，都很难听到风扇响。除非剪辑导出+多开模拟器。
-            </Tool>
-          </ToolsSection>
-          <ToolsSection title="设计工具">
-            <Tool title="Figma">
-              <Link href={'https://www.figma.com/'}>https://www.figma.com/</Link>
-              <br />
-              全栈开发必备的自己设计产品的软件。
-            </Tool>
-          </ToolsSection>
-          <ToolsSection title="个人管理">
-            <Tool title="Notion">
-              <Link href={'https://www.notion.so/zh-cn'}>https://www.notion.so/zh-cn</Link>
-              <br />
-              设计优良的笔记产品，内置诸多模版，方便自己管理自己的工期。
-            </Tool>
-            <Tool title="Linear">
-              <Link href={'https://linear.app/'}>https://linear.app/</Link>
-              <br />
-              如果想更进一步，自我监控产品进度，或者和一些人合作，Linear是非常棒的工具。
-            </Tool>
-          </ToolsSection>
-          <ToolsSection title="其他软件">
-          <Tool title="Homebrew">
-            <Link href={'https://brew.sh/'}>https://brew.sh/</Link>
-              <br/>
-              Mac软件包管理器，看不见摸不着的AppStore，非常爽。
-            </Tool>
-            <Tool title="OhMyZsh">
-            <Link href={'https://ohmyz.sh/'}>https://ohmyz.sh/</Link>
-              <br/>
-              Zsh升级。🐮。
-            </Tool>
-            <Tool title="Prxyman">
-              <Link href={'https://proxyman.io/'}>https://proxyman.io/</Link>
-              <br />
-              流量监控软件，俗称抓包软件，方便API调试。
-            </Tool>
-            <Tool title="Github桌面端">
-              <Link href={'https://desktop.github.com/'}>https://desktop.github.com/</Link>
-              <br />
-              - 你竟然用Git桌面App？
-              <br />
-               - 你就说好用不好用吧。
-            </Tool>
-          </ToolsSection>
+          <CopyButton content='zhaochunxiang1109' btntitle='  点击复制微信号咨询' />
+          <SpeakingSection title="SwfitUI-入门课">
+            <Appearance
+              href="https://www.cctalk.com/m/group/90565680"
+              title="赵纯想SwiftUI入门课程 - 轻松入门"
+              description="0基础。0计算机知识。完全小白的新手课。用生活中的字眼，解释编程世界中的“看似高大上的词汇”。纵观全网，最轻松的“单口相声版”《SwiftUI入门教程》，由讲课鬼才赵纯想出品。"
+              event="最新录制 2023 - 持续更新"
+              cta="课程报名"
+            />
+            <Appearance
+              href="https://www.bilibili.com/video/BV1dW4y1j7zG/"
+              title="iOS开发新手课程路线图｜赵纯想出品最新录制SwiftUI光速入门"
+              description=" 学完课程后，你将具备独自开发App的基础能力。."
+              event="最新录制 2023 - 持续更新"
+              cta="去B站看视频"
+            />
+          </SpeakingSection>
+          <SpeakingSection title="SwfitUI-进阶课">
+            <Appearance
+              href="course/proDevEnv"
+              title="准备：专业环境搭建"
+              description="学习如何安装zsh插件，homebrew，以及git。"
+              event="最新录制 2023 - 持续更新"
+              cta="查看文档"
+            />
+            <Appearance
+              href="course/github"
+              title="准备：使用Git管理你的代码"
+              description="让一切井井有条。"
+              event="最新录制 2023 - 持续更新"
+              cta="查看文档"
+            />
+            <Appearance
+              href="course/courseDocHttpRequest"
+              title="1-Http请求"
+              description="HTTP请求是网络编程中常用的一种方式，它可以帮助我们与网络上的服务器进行交互。在Swift语言中，我们可以使用系统提供的URLSession类来发起HTTP请求。"
+              event="最新录制 2023 - 持续更新"
+              cta="查看文档"
+            />
+            <Appearance
+              href="course/courseDocJSON"
+              title="2-JSON解析与页面渲染"
+              description="在 Swift 中可以使用 URLEncoding.queryString 或 URLEncoding.default 来对 URL 中的中文进行编码。"
+              event="最新录制 2023 - 持续更新"
+              cta="查看文档"
+            />
+            <Appearance
+              href="course/cocopodInstall"
+              title="3-CocoaPods介绍与安装"
+              description="CocoaPods是一个用于iOS和macOS开发的依赖管理工具。它允许开发人员管理第三方库和框架的依赖关系，并将其集成到Xcode项目中。"
+              event="最新录制 2023 - 持续更新"
+              cta="查看文档"
+            />
+            <Appearance
+              href="course/networkTools"
+              title="4-网络请求核武器之纯想框架使用"
+              description="我长期使用的网络框架。"
+              event="最新录制 2023 - 持续更新"
+              cta="查看文档"
+            />
+            <Appearance
+              href="course/networkTiming"
+              title="5-数据请求时机"
+              description="如何利用SwiftUI特性请求网络数据。"
+              event="最新录制 2023 - 持续更新"
+              cta="查看文档"
+            />
+            <Appearance
+              href="course/6_useOpenSourcePackage"
+              title="6-开源软件包使用"
+              description="开源软件包使用。"
+              event="最新录制 2023 - 持续更新"
+              cta="查看文档"
+            />
+            <Appearance
+              href="course/7_uikit"
+              title="7-巨人肩膀之桥接UIKit"
+              description="给开发者发送邮件。"
+              event="最新录制 2023 - 持续更新"
+              cta="查看文档"
+            />
+            <Appearance
+              href="course/8_CoreData"
+              title="8-CoreData本地数据"
+              description="给开发者发送邮件。"
+              event="最新录制 2023 - 持续更新"
+              cta="查看文档"
+            />
+
+          </SpeakingSection>
         </div>
       </SimpleLayout>
     </>
