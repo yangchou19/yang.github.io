@@ -2,7 +2,7 @@ import Head from 'next/head'
 
 import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
-import { getAllArticles } from '@/lib/getAllArticles'
+import { getAllArticlesByDir } from '@/lib/getAllArticles'
 import { formatDate } from '@/lib/formatDate'
 
 function Article({ article }) {
@@ -33,7 +33,23 @@ function Article({ article }) {
   )
 }
 
-export default function ArticlesIndex({ articles }) {
+function ExperienceList({ name, experiences }) {
+  return (
+    <>
+      <span className='font-mono text-2xl font-bold text-black dark:text-white'>{name}</span>
+      <div className="mt-5 md:border-l md:border-zinc-100 md:pl-6 md:dark:border-zinc-700/40">
+        <div className="flex max-w-3xl flex-col space-y-16">
+          {experiences.map((article) => (
+            <Article key={article.slug} article={article} />
+          ))}
+        </div>
+      </div>
+      <div class="mt-8 mb-12 border-t border-gray-300 my-4"></div>
+    </>
+  )
+}
+
+export default function ArticlesIndex({ allArticlesByDir }) {
   return (
     <>
       <Head>
@@ -47,13 +63,9 @@ export default function ArticlesIndex({ articles }) {
         title="在世界的成长和探索之路"
         intro="这里是我在这个社会寥寥无几的经历，仅此记录我。"
       >
-        <div className="md:border-l md:border-zinc-100 md:pl-6 md:dark:border-zinc-700/40">
-          <div className="flex max-w-3xl flex-col space-y-16">
-            {articles.map((article) => (
-              <Article key={article.slug} article={article} />
-            ))}
-          </div>
-        </div>
+        <ExperienceList name='校园经历' experiences={allArticlesByDir.school} />
+        <ExperienceList name='工作经历' experiences={[]} />
+        <ExperienceList name='实习经历' experiences={[]}  />
       </SimpleLayout>
     </>
   )
@@ -62,7 +74,8 @@ export default function ArticlesIndex({ articles }) {
 export async function getStaticProps() {
   return {
     props: {
-      articles: (await getAllArticles()).map(({ component, ...meta }) => meta),
+      // articles: (await getAllArticles()).map(({ component, ...meta }) => meta),
+      allArticlesByDir: await getAllArticlesByDir()
     },
   }
 }
