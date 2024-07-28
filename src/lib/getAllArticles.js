@@ -58,6 +58,5 @@ export async function getAllArticlesByDir() {
   Object.keys(articlesByDir).forEach((dirName) => {
     articlesByDir[dirName].sort((a, z) => new Date(z.date) - new Date(a.date));
   });
-  console.log('articlesByDir', articlesByDir)
   return articlesByDir;
 }
