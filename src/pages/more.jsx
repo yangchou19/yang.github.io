@@ -20,9 +20,9 @@ function Appearance({ title, description, event, cta, href }) {
       <Card.Title as="h3" href={href}>
         {title}
       </Card.Title>
-      <Card.Eyebrow decorate>{event}</Card.Eyebrow>
+      {/* <Card.Eyebrow decorate>{event}</Card.Eyebrow> */}
       <Card.Description>{description}</Card.Description>
-      <Card.Cta>{cta}</Card.Cta>
+      {cta && (<Card.Cta>{cta}</Card.Cta>)}
     </Card>
   )
 }
@@ -34,103 +34,72 @@ export default function Technology() {
         <title>杂谈</title>
         <meta
           name="一些杂谈"
-          content="发表自己的一些观点和感悟。"
+          content="发表自己的一些观点和感悟，关于自己看的书和电影，我精神世界。"
         />
       </Head>
       <SimpleLayout
         title="杂谈分享"
-        intro="发表自己的一些观点和感悟。"
+        intro="发表自己的一些观点和感悟，关于自己看的书和电影，我精神世界。"
       >
         <div className="space-y-20">
-          <CopyButton content='zhaochunxiang1109' btntitle='  点击复制微信号咨询' />
-          <SpeakingSection title="SwfitUI-入门课">
+          <SpeakingSection title="播客">
             <Appearance
-              href="https://www.cctalk.com/m/group/90565680"
-              title="赵纯想SwiftUI入门课程 - 轻松入门"
-              description="0基础。0计算机知识。完全小白的新手课。用生活中的字眼，解释编程世界中的“看似高大上的词汇”。纵观全网，最轻松的“单口相声版”《SwiftUI入门教程》，由讲课鬼才赵纯想出品。"
-              event="最新录制 2023 - 持续更新"
-              cta="课程报名"
+              href="https://www.xiaoyuzhoufm.com/podcast/5e5c52c9418a84a04625e6cc"
+              title="《硅谷101》"
+              description="《硅谷101》是泓君发起的深度访谈节目，是一档分享当下最新鲜的技术、知识与思想的科技播客。从去年就一直开始收听《硅谷101》，每次都会有特别多的干货，邀请许多重量级嘉宾分享他们独到见解，拉近了我和硅谷的距离。"
             />
             <Appearance
-              href="https://www.bilibili.com/video/BV1dW4y1j7zG/"
-              title="iOS开发新手课程路线图｜赵纯想出品最新录制SwiftUI光速入门"
-              description=" 学完课程后，你将具备独自开发App的基础能力。."
-              event="最新录制 2023 - 持续更新"
-              cta="去B站看视频"
+              href="https://www.xiaoyuzhoufm.com/podcast/648b0b641c48983391a63f98"
+              title="《42章经》"
+              description="《42章经》为大家找寻如沐春风的感觉，聚集了很多优秀有趣，有独到认知且愿意分享的人。每期节目都有非常深度的见解，产出质量很高，推荐大家订阅。"
+            />
+            <Appearance
+              href="https://www.xiaoyuzhoufm.com/podcast/60502e253c92d4f62c2a9577"
+              title="《十字路口Crossing》"
+              description="「十字路口」是乔布斯对苹果公司的一个比哈，形容它站在科技与人文的十字路口，伟大的产品往往诞生在这里。当下便是“十字路口“，koji和ronghui带来了很多方向和可能性。"
+            />
+            <Appearance
+              href="https://www.xiaoyuzhoufm.com/podcast/5eb7b46b418a84a046799cda"
+              title="《卧房撸歌》"
+              description="《卧房撸歌》是由掌柜阿峻主持的播客节目，给大家提供一个轻松愉快的听觉体验，还能进一步了解歌手。"
             />
           </SpeakingSection>
-          <SpeakingSection title="SwfitUI-进阶课">
+          <SpeakingSection title="读书">
             <Appearance
-              href="course/proDevEnv"
-              title="准备：专业环境搭建"
-              description="学习如何安装zsh插件，homebrew，以及git。"
-              event="最新录制 2023 - 持续更新"
-              cta="查看文档"
+              href="https://book.douban.com/subject/27171481/#review"
+              title="《平台革命》"
+              description="《平台革命》探讨了平台经济的兴起及其对传统商业模式的影响。分析了平台如何利用技术在多边市场中匹配生产者和消费者，释放隐藏资源并创造新的价值形式。同时让我如何设计产品应用给了很大启发"
             />
             <Appearance
-              href="course/github"
-              title="准备：使用Git管理你的代码"
-              description="让一切井井有条。"
-              event="最新录制 2023 - 持续更新"
-              cta="查看文档"
+              href="https://carpediemyang.notion.site/d5d9273474f84e2fa146d5d373ecd259?pvs=4"
+              title="《强风吹拂》"
+              description="《强风吹拂》是让我爱上跑步的一步书，可以让我深切感受跑步过程中给我带来什么样的感觉。是热血的，是给你激情的，这些是我需要的。"
+              cta="读后感"
             />
             <Appearance
-              href="course/courseDocHttpRequest"
-              title="1-Http请求"
-              description="HTTP请求是网络编程中常用的一种方式，它可以帮助我们与网络上的服务器进行交互。在Swift语言中，我们可以使用系统提供的URLSession类来发起HTTP请求。"
-              event="最新录制 2023 - 持续更新"
-              cta="查看文档"
+              title="《饱食穷民》"
+              description="《饱食穷民》是一本纪实文学作品，讲述了在泡沫经济时代的日本社会中，人民真实的生活故事。虽然物质上不匮乏，但精神上却极度贫困，陷入穷忙和债务缠身的极限状态。反映了中产阶层消失、贫富两极分化严重的“m型社会”特征。"
+            />
+          </SpeakingSection>
+          <SpeakingSection title="电影">
+            <Appearance
+              href="https://carpediemyang.notion.site/fd79f0e420b3420db1b19399a77c848f?pvs=4"
+              title="《死亡诗社》"
+              description="“我不希望度过非生活的生活，生活是如此可爱”"
+              cta="观后感"
+            />
+           <Appearance
+              href="https://carpediemyang.notion.site/63ba525469644bb39a042d6dcfcbe6a6?pvs=4"
+              title="《芬奇》"
+              description="人生的意义是什么？电影从一个对人生什么都不知道的机器人开始探索，到最后开始了解人生意义，从一个开始要受教导的机器人，到最后可以发挥主观能动性的Jeff，可以自己决定自己的人生。"
+              cta="观后感"
             />
             <Appearance
-              href="course/courseDocJSON"
-              title="2-JSON解析与页面渲染"
-              description="在 Swift 中可以使用 URLEncoding.queryString 或 URLEncoding.default 来对 URL 中的中文进行编码。"
-              event="最新录制 2023 - 持续更新"
-              cta="查看文档"
+              href="https://carpediemyang.notion.site/04bbf6fd0ce14c00aa2a1b339407d7ad?pvs=4"
+              title="《蓝色大门》"
+              description="大门总是隔离着内外两边的世界，推开大门之后，就变成另一个你了。会不会这是青春的大门，许久之后，在大门前看到了青春的结束，变成了体育老师，妈妈，程序员。但为什么又是蓝色呢？我能看见它么？"
+              cta="观后感"
             />
-            <Appearance
-              href="course/cocopodInstall"
-              title="3-CocoaPods介绍与安装"
-              description="CocoaPods是一个用于iOS和macOS开发的依赖管理工具。它允许开发人员管理第三方库和框架的依赖关系，并将其集成到Xcode项目中。"
-              event="最新录制 2023 - 持续更新"
-              cta="查看文档"
-            />
-            <Appearance
-              href="course/networkTools"
-              title="4-网络请求核武器之纯想框架使用"
-              description="我长期使用的网络框架。"
-              event="最新录制 2023 - 持续更新"
-              cta="查看文档"
-            />
-            <Appearance
-              href="course/networkTiming"
-              title="5-数据请求时机"
-              description="如何利用SwiftUI特性请求网络数据。"
-              event="最新录制 2023 - 持续更新"
-              cta="查看文档"
-            />
-            <Appearance
-              href="course/6_useOpenSourcePackage"
-              title="6-开源软件包使用"
-              description="开源软件包使用。"
-              event="最新录制 2023 - 持续更新"
-              cta="查看文档"
-            />
-            <Appearance
-              href="course/7_uikit"
-              title="7-巨人肩膀之桥接UIKit"
-              description="给开发者发送邮件。"
-              event="最新录制 2023 - 持续更新"
-              cta="查看文档"
-            />
-            <Appearance
-              href="course/8_CoreData"
-              title="8-CoreData本地数据"
-              description="给开发者发送邮件。"
-              event="最新录制 2023 - 持续更新"
-              cta="查看文档"
-            />
-
           </SpeakingSection>
         </div>
       </SimpleLayout>
