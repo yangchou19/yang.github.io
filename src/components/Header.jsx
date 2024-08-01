@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import {Avatar} from "@nextui-org/react";
 import { useRouter } from 'next/router'
 import { Popover, Transition } from '@headlessui/react'
 import clsx from 'clsx'
@@ -245,10 +244,6 @@ function HomeAvatar({ large = false, className, ...props }) {
         )}
         priority
       />
-      <Avatar
-        src = {avatarImage}      
-      >
-      </Avatar>
     </Link>
   )
 }
