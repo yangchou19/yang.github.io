@@ -22,9 +22,10 @@ export function Footer() {
             <div className="flex flex-col items-center justify-between gap-6 sm:flex-row">
               <div className="flex gap-6 text-sm font-medium text-zinc-800 dark:text-zinc-200">
                 <NavLink href="/about">关于我</NavLink>
-                <NavLink href="/projects">产品</NavLink>
-                <NavLink href="/speaking">课程</NavLink>
-                <NavLink href="/uses">更多</NavLink>
+                <NavLink href="/experience">经历</NavLink>
+                <NavLink href="/hobby">爱好</NavLink>
+                <NavLink href="/tec">技术</NavLink>
+                <NavLink href="/more">更多</NavLink>
               </div>
               {/* 版权所有 */}
               {/* <p className="text-sm text-zinc-400 dark:text-zinc-500">
