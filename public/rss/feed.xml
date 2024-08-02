@@ -4,7 +4,7 @@
         <title>Spencer Sharp</title>
         <link>undefined</link>
         <description>Your blog description</description>
-        <lastBuildDate>Thu, 01 Aug 2024 14:50:27 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 02 Aug 2024 18:17:26 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <image>
@@ -55,7 +55,23 @@
 <li>交互故事机器人：设计交互式剧本的读取和转化，根据不同内容产生相应的选项和故事情节。</li>
 <li>好感度属性：判断用户聊天内容和角色性格之间匹配度，并且根据内容进行调整变化。</li>
 </ul>
-<h3>Dreamle.ai</h3>]]></content:encoded>
+<h3>Dreamle.ai</h3>
+<p>是我参与的第二个产品开发任务，通过第一个产品验证市场的需求，随后着重开发自身的平台服务，web端和移动端。产品的重点是无限制内容的情感陪伴，主要提供多模态的聊天服务，支持图片发送；查看角色的朋友圈和Post；提供图片生成、图片收集和解锁功能；排行榜显示用户的交互，宝石积分系统等服务。总体来说是功能相对丰富完整的产品，主要开发周期大致3个月时间。</p>
+<h4>担任角色：全栈工程师（后端核心开发和前端开发），后端上负责核心的聊天、长期记忆等涉及聊天核心业务开发，总代码量为：5000+代码改动；前端主要负责排行榜展示和图片生成页面，总代码量：10000+改动。</h4>
+<h4>后端：</h4>
+<ul>
+<li>聊天业务：负责聊天室的CRUD以及聊天内容生成；设计prompt的构造，保证聊天内容的一致性；根据不同大模型调整参数</li>
+<li>首页推荐：设计首页的bot排序和推荐算法，满足不同用户根据tags推荐感兴趣角色</li>
+<li>memory服务：提供将用户和角色聊天记录导出公布，同时加载其他用户memory作为自身聊天记录</li>
+<li>长记忆：角色聊天保持长期记忆，因此设计记忆存储的RAG服务，提供检索、存储、总结和删除记忆的功能，保证聊天记忆拓展</li>
+<li>图片检索：设计图片发送的流程事件，同时图片内容检索的RAG服务，保证聊天过程图文一致性</li>
+</ul>
+<h4>前端：</h4>
+<ul>
+<li>排行榜页面：根据用户和角色交互数据统计，将数据进行展示；同时根据用户的成就进行结算</li>
+<li>图片制作页面：按照步骤选择对应模型、tag后生成图片，实现对图片进行保存、下载功能</li>
+<li>角色卡片：实现角色卡片的设计和交互实现，同时针对不同细节优化。</li>
+</ul>]]></content:encoded>
             <author>spencer@planetaria.tech (Spencer Sharp)</author>
         </item>
         <item>
