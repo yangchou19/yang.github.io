@@ -66,7 +66,7 @@ export default function ArticlesIndex({ allArticlesByDir }) {
       </Head>
       <SimpleLayout
         title="在世界的成长和探索之路"
-        intro="这里是我在这个社会寥寥无几的经历，仅此记录我。"
+        intro="这里是我在这个社会寥寥无几的经历，仅此记录我，点击获取详情💻！"
       >
         <ExperienceList name='工作经历' experiences={allArticlesByDir.work} />
         <ExperienceList name='论文发表' experiences={allArticlesByDir.paper} />

@@ -1,16 +1,14 @@
 import Image from 'next/image'
 import Head from 'next/head'
 import Link from 'next/link'
+import { RiNotionFill } from "react-icons/ri";
 import clsx from 'clsx'
 
 import { Container } from '@/components/Container'
 import {
-  TikTokIcon,
-  GitHubIcon,
-  TwitterIcon,
   BiliBiliIcon,
 } from '@/components/SocialIcons'
-import portraitImage from '@/images/portrait1.jpg'
+import portraitImage from '@/images/portrait2.jpg'
 
 function SocialLink({ className, href, children, icon: Icon }) {
   return (
@@ -43,8 +41,8 @@ export default function About() {
       <Head>
         <title>关于我 - </title>
         <meta
-          name="关于周晨扬"
-          content="我对创造感兴趣。而不局限于小说、软件，和剧本。创造的激情是我作为人生的意义所一直保护的东西， 尽管它曾屡受打击，但总能从我乐天派的心地上重新抽丝剥茧。"
+          name="关于我"
+          content=""
         />
       </Head>
       <Container className="mt-16 sm:mt-32">
@@ -61,53 +59,35 @@ export default function About() {
           </div>
           <div className="lg:order-first lg:row-span-2">
             <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-              关于周晨扬
+              关于我
             </h1>
             <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
               <p>
-                我对创造感兴趣。而不局限于小说、软件，和剧本。创造的激情是我作为人生的意义所一直保护的东西，
-                尽管它曾屡受打击，但总能从我乐天派的心地上重新抽丝剥茧。我也曾因此落入贫穷的境地。
-                相对于文学————一种自然的、甚至任意性的指尖流式输出，用代码构造软件是我后来更感兴趣
-                的领域。因为它更具工程的意义，可以使用整个人类暴露在开源世界的东西作为杠杆，尽最大的所能发挥创意。
-                更重要的是，从我的指尖到用户屏幕上用户们的指尖，这种从技术设计到人文体验的过程，让我感到痴迷。
+                人生需要不断的认识自己、看清自己、思考自己。
               </p>
               <p>
-                从写小说，到写代码。之间的差异是巨大的。而一旦我越过了这种差异，我就知道没有什么是不可能的。
-                从前我研究罗曼·波兰斯基，福楼拜和陀翁，现在我痴醉于Next.js,React,SwiftUI和FastApi，这两
-                项所谓“研究”的动作没有什么不同，无非是“学习前人如何创造，并为后人留下一些创造”。
-                不得不说写小说和写代码所调用的神经元集群差异巨大，以至于我的大脑几乎经历了二次发育。
-                而自始至终，我从未感到真的忘记过什么，或者脑子不够用。从而我开始相信人的潜力无穷，并希望尽可能
-                拉拢更多的大脑开发者，加入跨学科创造的行列。我忽然意识到人一旦停止学习和涉足不同的领域，
-                就会被日益顽固的认知之墙所禁锢。刚学习SwiftUI不久后，我喜欢在论坛上和RN开发者们展开口水战。视图论证
-                原生的伟大。但后来我痴醉于Next.js，才意识到人之所以捍卫自己所学的东西并奉为圭臬，无非是因为他
-                的潜意识在惧怕别人所掌握的东西，而自己懒得跨越。
+                我是扬，是一个很普普通通的人，有一些爱好的程序员，爱记录和思考这个世界；时常会对抗这个信息过载的世界，让自己保持专注；不喜欢这个世界表面，努力的看到那些本质；不想夸大其词，保持实事求是，谦虚踏实。没有特别过人的长处，至今走着大部分人走的道路，但希望不止于此，我热爱冒险与挑战，喜欢与众不同，而不是随大流。虽然还没有特别大的成就，但在自己人生道路上踏实的做好自己事情。
               </p>
               <p>
-                跨越，跨越，跨越现有的东西。痛击我们认知的疆界。
+                当今的世界，每天变化太快，充斥着泡沫、浮躁、利益，事情快速变化让世界逐渐变成草台班子，面对如此的世界，实事求是是需要极大勇气的。在看清世界真相之后，仍然保持当初的真挚是不朽的。
               </p>
               <p>
-                这是我即将发起纯想理心社的初衷。和你们一样期待它的快速到来。
+                对我来说，在这个频率变化的世界，我所需要保持三种东西：<span className='font-bold'>热情、踏实、生命力</span>。热情让我能有动力去做一件事，踏实是让我把这件事做好；生命力是每个人都必须要有的，是如何的爱自己，只有爱自己后才能分享和传播，展现你的生命。
               </p>
             </div>
           </div>
           <div className="lg:pl-20">
             <ul role="list">
-              <SocialLink className='pt-3' href="https://v.douyin.com/hfLkMQV/" icon={TikTokIcon}>
-                在 抖音 上关注我
+              <SocialLink className='pt-3' href="https://carpediemyang.notion.site/Yang-31824db1254648dd884641392516950d" icon={RiNotionFill}>
+                Notion主页
               </SocialLink>
-              <SocialLink className='pt-3' href="https://space.bilibili.com/26317883/" icon={BiliBiliIcon}>
-                在 Bilibili 上关注我
-              </SocialLink>
-              <SocialLink className='pt-3' href="https://twitter.com/liseami1" icon={TwitterIcon}>
-                在Twitter 上关注我
-              </SocialLink>
-              <SocialLink className='pt-3' href="https://github.com/liseami" icon={GitHubIcon}>
-                在Github上关注我
+              <SocialLink className='pt-3' href="https://space.bilibili.com/24926202" icon={BiliBiliIcon}>
+                Bilibili主页
               </SocialLink>
               <SocialLink
                 href="mailto:spencer@planetaria.tech"
                 icon={MailIcon}
-                className="mt-8 border-t border-zinc-100 pt-8 dark:border-zinc-700/40"
+                className="pt-3"
               >
                 1178574011@qq.com
               </SocialLink>
