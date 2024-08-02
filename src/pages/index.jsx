@@ -50,17 +50,17 @@ export default function Home({ articles }) {
     <>
       <Head>
         <title>
-          周晨扬的个人网站 - 技术、爱好和博客
+          个人网站 - 技术、爱好和经历
         </title>
         <meta
-          name="周晨扬个人网站"
+          name="个人网站"
           content="我是有一些爱好的程序员。"
         />
       </Head>
       <Container className="mt-24">
         <div className="max-w-2xl pb-24">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-            周晨扬的个人网站
+            我的部分
           </h1>
 
           {/* 联系方式连接 */}
@@ -69,7 +69,7 @@ export default function Home({ articles }) {
             这是我的<CopyButton content="spacecowboyyang" btntitle='私人微信' className="text-emerald-600" />，欢迎一起交流。
             <br></br>
             <br></br>
-            这是我的个人简介。
+            我的个人简介。
             <br></br>
             <br></br>
             正在努力变得更好，不淹没在历史的潮流之中。
