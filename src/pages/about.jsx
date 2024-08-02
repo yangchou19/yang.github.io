@@ -6,12 +6,9 @@ import clsx from 'clsx'
 
 import { Container } from '@/components/Container'
 import {
-  TikTokIcon,
-  GitHubIcon,
-  TwitterIcon,
   BiliBiliIcon,
 } from '@/components/SocialIcons'
-import portraitImage from '@/images/portrait1.jpg'
+import portraitImage from '@/images/portrait2.jpg'
 
 function SocialLink({ className, href, children, icon: Icon }) {
   return (
@@ -45,7 +42,7 @@ export default function About() {
         <title>关于我 - </title>
         <meta
           name="关于我"
-          content="我对创造感兴趣。而不局限于小说、软件，和剧本。创造的激情是我作为人生的意义所一直保护的东西， 尽管它曾屡受打击，但总能从我乐天派的心地上重新抽丝剥茧。"
+          content=""
         />
       </Head>
       <Container className="mt-16 sm:mt-32">
@@ -66,22 +63,21 @@ export default function About() {
             </h1>
             <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
               <p>
-                
+                人生需要不断的认识自己、看清自己、思考自己。
               </p>
               <p>
-               
+                我是扬，是一个很普普通通的人，有一些爱好的程序员，爱记录和思考这个世界；时常会对抗这个信息过载的世界，让自己保持专注；不喜欢这个世界表面，努力的看到那些本质；不想夸大其词，保持实事求是，谦虚踏实。没有特别过人的长处，至今走着大部分人走的道路，但希望不止于此，我热爱冒险与挑战，喜欢与众不同，而不是随大流。虽然还没有特别大的成就，但在自己人生道路上踏实的做好自己事情。
               </p>
               <p>
-                跨越，跨越，跨越现有的东西。痛击我们认知的疆界。
+                当今的世界，每天变化太快，充斥着泡沫、浮躁、利益，事情快速变化让世界逐渐变成草台班子，面对如此的世界，实事求是是需要极大勇气的。在看清世界真相之后，仍然保持当初的真挚是不朽的。
               </p>
               <p>
-                这是我即将发起纯想理心社的初衷。和你们一样期待它的快速到来。
+                对我来说，在这个频率变化的世界，我所需要保持三种东西：<span className='font-bold'>热情、踏实、生命力</span>。热情让我能有动力去做一件事，踏实是让我把这件事做好；生命力是每个人都必须要有的，是如何的爱自己，只有爱自己后才能分享和传播，展现你的生命。
               </p>
             </div>
           </div>
           <div className="lg:pl-20">
             <ul role="list">
-  
               <SocialLink className='pt-3' href="https://carpediemyang.notion.site/Yang-31824db1254648dd884641392516950d" icon={RiNotionFill}>
                 Notion主页
               </SocialLink>

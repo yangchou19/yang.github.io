@@ -4,10 +4,9 @@ import Link from 'next/link'
 import CopyButton from '@/components/CopyBtn'
 import { Card } from '@/components/Card'
 import { Container } from '@/components/Container'
+import { RiNotionFill } from "react-icons/ri";
 import {
-  TikTokIcon,
   GitHubIcon,
-  TwitterIcon,
   BiliBiliIcon
 
 } from '@/components/SocialIcons'
@@ -23,7 +22,7 @@ import { ProjectList } from '@/pages/hobby'
 function Article({ article }) {
   return (
     <Card as="article">
-      <Card.Title href={`/articles/${article.slug}`}>
+      <Card.Title href={`/experience/${article.slug}`}>
         {article.title}
       </Card.Title>
       <Card.Eyebrow as="time" dateTime={article.date} decorate>
@@ -59,22 +58,26 @@ export default function Home({ articles }) {
       </Head>
       <Container className="mt-24">
         <div className="max-w-2xl pb-24">
-          <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-            我的部分
-          </h1>
-
-          {/* 联系方式连接 */}
+          <h2 className="text-3xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
+            你好，我是扬。
+          </h2>
           <SocialLinks />
+          <p className="mt-6 text-base font-bold text-zinc-600 dark:text-zinc-400">
+            &quot;People with passion can change the world for the better.&quot; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; — Steve Jobs
+            <br></br>
+            &quot;I skate to where the puck is going to be，not where it has been.&quot; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - &nbsp;Wayne Gretzky
+          </p>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            这是我的<CopyButton content="spacecowboyyang" btntitle='私人微信' className="text-emerald-600" />，欢迎一起交流。
+            Steve Jobs逝世10周年之际，APPLE官网上映了简短影片记录了乔布斯在苹果期间的时刻，最后提到了Wayne Gretzky这句话。我把这个视频保存，时不时会翻看一下，激励自己。<a href="https://www.bilibili.com/video/BV1jfiTePEd5" className='text-green-500 cursor-pointer '>🔗链接</a>
+          </p>
+          <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
+            世界加速了，变难了，时间变快了，归根到整个世界的频率提高，接触的信息变化太快。科技的每次革命都把把时间和空间的屏障打破，短期变化的事物是一个个风口，而更多需要关注哪些低频的，长期的事物，那才是未来趋势。
             <br></br>
+            科技带来的效率提升，让人们专注度越来越低；我需要的是专注、专注、专注；迎接这次的历史潮流，找到趋势屹立在其中！
             <br></br>
-            我的个人简介。
-            <br></br>
-            <br></br>
-            正在努力变得更好，不淹没在历史的潮流之中。
           </p>
         </div>
+
         {/* 产品 */}
         <ProjectList />
         {/* <Products /> */}
@@ -101,20 +104,13 @@ function SocialLinks() {
   return (
     <div className="mt-6 flex gap-6">
       <SocialLink
-        href=""
-        aria-label="Follow on Bilibili"
+        href="https://space.bilibili.com/24926202"
         icon={BiliBiliIcon}
       />
-      <SocialLink
-        href=""
-        aria-label="Follow on GitHub"
-        icon={GitHubIcon}
-      />
-      <SocialLink
-        href=""
-        aria-label="Follow on Twitter"
-        icon={TwitterIcon}
-      />
+      <SocialLink href="https://carpediemyang.notion.site/Yang-31824db1254648dd884641392516950d"
+        icon={RiNotionFill}>
+      </SocialLink>
+      <CopyButton content="spacecowboyyang" btntitle='私人微信' className="text-emerald-600" />
     </div>
   )
 }
