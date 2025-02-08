@@ -1,33 +1,38 @@
 import Head from 'next/head'
 import { motion } from 'framer-motion'
+import AppleHeader from '@/components/AppleHeader'
 
 export default function AppleStyle() {
   return (
     <>
       <Head>
-        <title>Apple 风格页面</title>
+        <title>Home page</title>
         <meta
           name="description"
-          content="一个模仿 Apple.com 风格的展示页面"
+          content=""
         />
       </Head>
 
+      <AppleHeader />
       <div className="overflow-hidden">
-        {/* 英雄区块 */}
-        <section className="relative h-screen flex items-center justify-center bg-black text-white">
+
+        <section className="relative h-screen flex items-center justify-center bg-white dark:bg-black text-black dark:text-white">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <h1 className="text-6xl font-bold mb-4">令人惊叹的产品</h1>
-            <p className="text-xl text-gray-400">突破性的创新，只为更好的体验</p>
+            <h1 className="text-5xl font-bold mb-4 px-10">People with passion can change the world for the better.</h1>
+            <p className="text-xl text-gray-400">有热情的人才能使世界变得更好！</p>
+            <button className="mt-4 bg-black dark:bg-white text-black px-8 py-3 rounded-full text-lg text-white dark:text-black font-semibold hover:bg-gray-100 transition-colors">
+             Start
+            </button>
           </motion.div>
         </section>
 
         {/* 产品展示区 */}
-        <section className="py-20 bg-white">
+        <section className="py-20 bg-gray-50 dark:bg-gray-900">
           <div className="max-w-7xl mx-auto px-4">
             <motion.div
               initial={{ opacity: 0 }}
@@ -47,7 +52,7 @@ export default function AppleStyle() {
         </section>
 
         {/* 特性展示区 */}
-        <section className="py-20 bg-gray-50">
+        <section className="py-20 bg-white dark:bg-black">
           <div className="max-w-7xl mx-auto px-4">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[1, 2, 3].map((item) => (
@@ -70,7 +75,7 @@ export default function AppleStyle() {
         </section>
 
         {/* CTA区域 */}
-        <section className="py-20 bg-black text-white">
+        <section className="py-20 bg-gray-900 dark:bg-black text-white">
           <div className="max-w-3xl mx-auto text-center px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}

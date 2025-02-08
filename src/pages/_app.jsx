@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react'
 import TagManager from 'react-gtm-module'
 import { Footer } from '@/components/Footer'
-import { Header } from '@/components/Header'
+import AppleHeader from '@/components/AppleHeader'
 
 import '@/styles/tailwind.css'
 import 'focus-visible'
@@ -28,7 +28,8 @@ export default function App({ Component, pageProps, router }) {
         </div>
       </div>
       <div className="relative">
-        <Header />
+        {/* <Header /> */}
+        <AppleHeader />
         <main>
           <Component previousPathname={previousPathname} {...pageProps} />
         </main>
