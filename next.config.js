@@ -12,6 +12,20 @@ const nextConfig = {
         },
       },
     });
+
+    // 添加 MDX 支持
+    config.module.rules.push({
+      test: /\.mdx?$/,
+      use: [
+        {
+          loader: '@mdx-js/loader',
+          options: {
+            /* MDX 配置选项 */
+          }
+        }
+      ]
+    });
+
     return config;
   },
 }
