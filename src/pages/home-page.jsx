@@ -6,6 +6,7 @@ import jobsImage from '@/images/jobs.png'
 import portraitImage from '@/images/japan.jpeg' 
 import { useState } from 'react'
 import { VideoModal } from '@/components/Modal'
+import { TypeAnimation } from 'react-type-animation'
 
 export default function Homepage() {
   const [isModalOpen, setIsModalOpen] = useState(false)
@@ -55,12 +56,9 @@ export default function Homepage() {
                 Start
               </button>
             </motion.div>
-
-
           </div>
         </section>
 
-        {/* 产品展示区 */}
         <section className="py-20 bg-gray-50 dark:bg-black">
           <div className="max-w-7xl mx-auto px-4">
             <motion.div
@@ -70,16 +68,26 @@ export default function Homepage() {
               className="grid grid-cols-1 md:grid-cols-2 gap-12"
             >
               <div className="space-y-6">
-                <h2 className="text-4xl font-semibold text-black dark:text-white">你好，我是扬。</h2>
-                <p className="text-xl text-gray-800 dark:text-gray-400">
-                世界<span className="font-bold">加速了，变难了，时间变快了，</span>归根到整个世界的频率提高，接触的信息变化太快。
-                </p>
-                <p className="text-xl text-gray-800 dark:text-gray-400">
-                科技的每次革命都把时间和空间的屏障打破，短期变化的事物是一个个风口，而更多需要关注哪些<span className="font-bold">低频的，长期的</span>事物，那才是未来趋势。
-                </p>
-                <p className="text-xl text-gray-800 dark:text-gray-400">
-                科技带来的效率提升，让人们专注度越来越低；我需要的是<span className="font-bold">专注</span>；迎接这次的历史潮流，找到趋势屹立在其中！
-                </p>
+                <h2 className="text-4xl font-semibold text-black dark:text-white">
+                  你好，我是扬。
+                </h2>
+                <div className="space-y-6">
+                  <p className="text-xl text-gray-800 dark:text-gray-400 whitespace-pre-wrap">
+                    <TypeAnimation
+                      sequence={[
+                        '世界加速了，变难了，时间变快了，归根到整个世界的频率提高，接触的信息变化太快。\n\n',
+                        1000,
+                        '世界加速了，变难了，时间变快了，归根到整个世界的频率提高，接触的信息变化太快。\n\n科技的每次革命都把时间和空间的屏障打破，短期变化的事物是一个个风口，而更多需要关注哪些低频的，长期的事物，那才是未来趋势。\n\n',
+                        1000,
+                        '世界加速了，变难了，时间变快了，归根到整个世界的频率提高，接触的信息变化太快。\n\n科技的每次革命都把时间和空间的屏障打破，短期变化的事物是一个个风口，而更多需要关注哪些低频的，长期的事物，那才是未来趋势。\n\n科技带来的效率提升，让人们专注度越来越低；我需要的是专注；迎接这次的历史潮流，找到趋势屹立在其中！',
+                      ]}
+                      wrapper="span"
+                      speed={20}
+                      repeat={0}
+                      cursor={false}
+                    />
+                  </p>
+                </div>
               </div>
               <div className="aspect-video bg-gray-100 rounded-lg">
                 <Image
@@ -94,19 +102,18 @@ export default function Homepage() {
           </div>
         </section>
 
-        {/* 特性展示区 */}
         <section className="py-20 bg-white dark:bg-black">
+        <h2 className="text-4xl text-center font-bold mb-6 text-black dark:text-white">Three things should be cherished in the world！</h2>
           <div className="max-w-7xl mx-auto px-4">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
-                className="p-6 bg-white rounded-2xl shadow-sm"
+                className="p-6 bg-white rounded-2xl shadow-sm dark:bg-black dark:shadow-white"
               >
-                {/* <div className="w-12 h-12 bg-gray-100 rounded-full mb-4"></div> */}
-                <h3 className="text-xl font-semibold mb-2">热情</h3>
-                <p className="text-gray-600">
+                <h3 className="text-xl font-semibold mb-2 dark:text-white">热情</h3>
+                <p className="text-gray-600 dark:text-gray-400">
                   热情驱使我不断探索这个世界。
                 </p>
               </motion.div>
@@ -114,11 +121,10 @@ export default function Homepage() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
-                className="p-6 bg-white rounded-2xl shadow-sm"
+                className="p-6 bg-white rounded-2xl shadow-sm dark:bg-black dark:shadow-white"
               >
-                {/* <div className="w-12 h-12 bg-gray-100 rounded-full mb-4"></div> */}
-                <h3 className="text-xl font-semibold mb-2">踏实</h3>
-                <p className="text-gray-600">
+                <h3 className="text-xl font-semibold mb-2 dark:text-white">踏实</h3>
+                <p className="text-gray-600 dark:text-gray-400">
                   踏实让我完成内在的积累与沉淀。
                 </p>
               </motion.div>
@@ -126,11 +132,10 @@ export default function Homepage() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
-                className="p-6 bg-white rounded-2xl shadow-sm"
+                className="p-6 bg-white rounded-2xl shadow-sm dark:bg-black dark:shadow-white"
               >
-                {/* <div className="w-12 h-12 bg-gray-100 rounded-full mb-4"></div> */}
-                <h3 className="text-xl font-semibold mb-2">生命力</h3>
-                <p className="text-gray-600">
+                <h3 className="text-xl font-semibold mb-2 dark:text-white">生命力</h3>
+                <p className="text-gray-600 dark:text-gray-400">
                   生命力是我活在世界的最终目标。
                 </p>
               </motion.div>
@@ -138,7 +143,7 @@ export default function Homepage() {
           </div>
         </section>
 
-        {/* CTA区域 */}
+
         <section className="py-20 bg-gray-50 dark:bg-black text-black">
           <div className="max-w-3xl mx-auto text-center px-4">
             <motion.div
@@ -157,6 +162,7 @@ export default function Homepage() {
           </div>
         </section>
       </div>
+
 
       <VideoModal isOpen={isModalOpen} setIsOpen={setIsModalOpen} />
     </>

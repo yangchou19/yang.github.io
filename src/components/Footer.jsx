@@ -25,7 +25,7 @@ export function Footer() {
         }`}>
           <Container.Inner>
             <div className="flex flex-col items-center justify-center gap-6 sm:flex-row">
-              <div className={`flex gap-6 text-sm font-medium ${
+              <div className={`flex gap-6 text-base font-medium ${
                 isHomePage ? 'text-black/80 dark:text-white/80' : 'text-zinc-800 dark:text-zinc-200'
               }`}>
                 <NavLink href="/about">关于我</NavLink>

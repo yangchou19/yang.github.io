@@ -76,11 +76,6 @@ export default function Uses() {
               <br />
               本网站使用Tailwind CSS进行样式设计, 同时在公司产品设计中同样使用tailwind css,非常好用且高效!
             </Tool>
-            {/* <Tool title="NextUI">
-              <Link href={'https://nextui.org/'} className='cursor-pointer'>https://nextui.org/</Link>
-              <br />
-              NextUI 是一个现代的 React UI 框架，基于 Tailwind CSS 构建，提供了丰富的组件库和强大的功能，非常适合用于构建现代 Web 应用程序。
-            </Tool> */}
           </ToolsSection>
           <ToolsSection title="后端">
             <Tool title="Fastapi">

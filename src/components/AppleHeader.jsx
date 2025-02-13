@@ -96,7 +96,7 @@ export default function AppleHeader() {
                 }`}
         >
             <nav className="max-w-[980px] mx-auto">
-                <ul className="flex items-center justify-center gap-8 h-12 px-8 text-sm">
+                <ul className="flex items-center justify-center gap-8 h-12 px-8 text-base">
                     <li>
                         <Link href="/" className="text-black/80 dark:text-white/80 hover:text-black dark:hover:text-white">
                             <svg

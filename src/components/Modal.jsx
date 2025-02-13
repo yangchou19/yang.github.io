@@ -48,7 +48,7 @@ export function VideoModal({ isOpen, setIsOpen }) {
                   
                   <div className="mt-2">
                     <h2 className="text-4xl font-bold mb-4 text-black dark:text-white">
-                      纪念乔布斯逝世10周年
+                    A star in the universe.
                     </h2>
                     
                     <div className="relative pt-[56.25%] w-full">
@@ -60,9 +60,11 @@ export function VideoModal({ isOpen, setIsOpen }) {
                         playsInline
                       />
                     </div>
-
                     <p className="text-gray-600 dark:text-gray-300 text-lg leading-relaxed mt-4">
-                      乔布斯逝世10周年，让我们一起回顾他的传奇人生。
+                    &quot;I skate to where the puck is going to be，not where it has been.&quot;       -  Wayne Gretzky
+                    </p>
+                    <p className="text-gray-600 dark:text-gray-300 text-base leading-relaxed mt-4">
+                    Steve Jobs一直是我精神偶像，在逝世10周年之际，APPLE官网上映了这部影片！当天看了无数遍，久久不能平静。于是把视频默默保存下放在桌面，每次看完都会找到热情。
                     </p>
                   </div>
                 </div>
