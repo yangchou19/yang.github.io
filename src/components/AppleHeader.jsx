@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import avatarImage from '@/images/avatar.jpg'
 
 
 function SunIcon(props) {

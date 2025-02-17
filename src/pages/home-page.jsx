@@ -3,10 +3,12 @@ import Image from 'next/image'
 import { motion } from 'framer-motion'
 import AppleHeader from '@/components/AppleHeader'
 import jobsImage from '@/images/jobs.png'
-import portraitImage from '@/images/japan.jpeg' 
+import portraitImage from '@/images/japan.jpeg'
 import { useState } from 'react'
 import { VideoModal } from '@/components/Modal'
 import { TypeAnimation } from 'react-type-animation'
+import InterestCards from '@/components/InterestCards'
+
 
 export default function Homepage() {
   const [isModalOpen, setIsModalOpen] = useState(false)
@@ -49,7 +51,7 @@ export default function Homepage() {
             >
               <h1 className="text-5xl font-bold mb-4">People with passion can change the world for the better!</h1>
               <p className="mt-6 text-xl text-gray-400">有热情的人才能使这个世界变得更好！</p>
-              <button 
+              <button
                 onClick={() => setIsModalOpen(true)}
                 className="mt-4 bg-black dark:bg-white text-white dark:text-black px-8 py-3 rounded-full text-lg font-semibold hover:bg-gray-100 transition-colors"
               >
@@ -103,7 +105,7 @@ export default function Homepage() {
         </section>
 
         <section className="py-20 bg-white dark:bg-black">
-        <h2 className="text-4xl text-center font-bold mb-6 text-black dark:text-white">Three things should be cherished in the world！</h2>
+          <h2 className="text-4xl text-center font-bold mb-6 text-black dark:text-white">Three things should be cherished in the world！</h2>
           <div className="max-w-7xl mx-auto px-4">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <motion.div
@@ -143,6 +145,7 @@ export default function Homepage() {
           </div>
         </section>
 
+        <InterestCards />
 
         <section className="py-20 bg-gray-50 dark:bg-black text-black">
           <div className="max-w-3xl mx-auto text-center px-4">
@@ -162,7 +165,6 @@ export default function Homepage() {
           </div>
         </section>
       </div>
-
 
       <VideoModal isOpen={isModalOpen} setIsOpen={setIsModalOpen} />
     </>
